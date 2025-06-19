@@ -82,34 +82,48 @@
         background: #F2E2D2;
       }
       /* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
+       body {
+            margin: 0;
+            overflow: hidden;
+       }
+
+      #myVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; 
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
 }
     </style>
   </head>
 
   <body>
     <img class="profile-photo" src="paolo.gif" alt="Paolo Banchero Alley Oop gif" />
-    <video autoplay muted loop id="myVideo">
+    <video autoplay muted loop playsinline id="myVideo">
         <source src="space.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
+      <script>
+        document.getElementById('space.mp4').play().catch(function(error) {
+            console.log("Autoplay failed: ", error);
+            // Fallback
+        });
+    </script>
+    
     <h1>Jacob's Portfolio</h1>
 
-    <p>Data, Crypto & Stocks, Car Detailing</p>
+    <p>High-Risk Growth Investor, Data, Sports, and Car Detailing</p>
 
     <ul class="link-tree">
       <li>
-        <a href="https://journal.brettchalupa.com" target="_blank">
+        <a href="https://github.com/jbrodev" target="_blank">
           My Data Projects
         </a>
       </li>
       <li>
-        <a href="https://youtube.com/c/Monoso" target="_blank">
+        <a href="https://www.dropbox.com/scl/fo/netekk5hpiluc472ky6yn/AIZZanj_OZWHYqOfnBY_Bb4?rlkey=eywf1zpr5ljrum9kc2uat7p9d&st=gaslwq9t&dl=0" target="_blank">
           Trading Screenshots
         </a>
       </li>
